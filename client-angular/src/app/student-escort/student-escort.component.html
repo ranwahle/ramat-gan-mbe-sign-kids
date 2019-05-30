@@ -1,0 +1,32 @@
+<div>
+  <h2>בתום הפעילות</h2>
+  <div>
+    <label>
+      <input type="radio" value="alone" [(ngModel)]="goHome">
+      הילד/ה הולך/ת הביתה בכוחות עצמו/ה
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="radio" value="withEscort" [(ngModel)]="goHome">
+      ישתחרר בליווי
+    </label>
+  </div>
+  <div  *ngIf="goHome === 'withEscort'">
+  <div *ngFor="let escort of escorts">
+    <label>
+      שם מלא
+      <input type="text" [(ngModel)]="escort.fullName">
+    </label>
+    <label>
+     טלפון:
+      <input type="tel" [(ngModel)]="escort.phoneNumber">
+    </label>
+    <label>
+      קרבה:
+      <input type="text" [(ngModel)]="escort.relation">
+    </label>
+  </div>
+  <button type="button" (click)="addEscort()" >הוספת מלווה</button>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div [formGroup]="formGroup"> <label>
+  שם פרטי:
+  <input type="text" [formControlName]="'firstName'">
+</label>
+
+<label>
+  שם משפחה:
+  <input type="text" [(ngModel)]="lastName" formControlName="lastName">
+</label>
+
+
+<label>כיתה:
+  <input type="text" [(ngModel)]="schoolClass" formControlName="schoolClass">
+</label>
+
+<label>בית ספר:
+  <input type="text" [(ngModel)]="schoolName" formControlName="schoolName">
+</label>
+</div>

@@ -1,0 +1,24 @@
+<div>
+  <h2>
+    צילום הילדים ופרסום התמונות
+  </h2>
+  <div>
+    במסגרת הקייטנה יצולמו הילדים
+  </div>
+  <div>
+    <label>
+      <mat-checkbox type="checkbox" [(ngModel)]="photographApproval" (change)="photographApprovalChanged()">
+      </mat-checkbox>
+      הנני מאשר לצלם תמונות בני/ ביתי
+    </label>
+
+  </div>
+  <div>
+    <label>
+      <mat-checkbox type="checkbox" [(ngModel)]="photoUseApproval" [disabled]="!photographApproval">
+      </mat-checkbox>
+      הנני מאשר לפרסם תמונות בני/ ביתי
+    </label>
+
+  </div>
+</div>

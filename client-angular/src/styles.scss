@@ -1,0 +1,16 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+/* You can add global styles to this file, and also import other style files */
+input[type=text], input[type=tel] {
+  border-buttom-style: solid;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-color: black;
+  border-width: 1px;
+}
+
+label, h1, h2 {
+  font-family: arial;
+}
