@@ -9,10 +9,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 export class StudentDetailsComponent implements OnInit {
 
   @Input() formGroup: FormGroup;
-  firstName: string;
-  lastName: string;
-  schoolClass: string;
-  schoolName: string;
+
 
   constructor() { }
 

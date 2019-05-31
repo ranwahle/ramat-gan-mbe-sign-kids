@@ -8,10 +8,10 @@
         <h2>הצהרת בריאות</h2>
       <app-health-statement [formGroup]="formGroup" ></app-health-statement>
       </div>
-      <app-parent-contact-details></app-parent-contact-details>
-      <app-photography-approval></app-photography-approval>
-      <app-student-escort></app-student-escort>
+      <app-parent-contact-details [formGroup]="formGroup"></app-parent-contact-details>
+      <app-photography-approval [formGroup]="formGroup"></app-photography-approval>
+      <app-student-escort [formGroup]="formGroup"></app-student-escort>
       <button mat-button type="submit">שלח</button>
-      {{formGroup.errors | json}}
+
     </form>
 </div>

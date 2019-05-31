@@ -1,11 +1,11 @@
-<div>
+<div [formGroup]="formGroup">
   <label>
     שם ההורה
-    <input type="text" [(ngModel)]="parentName">
+    <input type="text" formControlName="parentName">
   </label>
 
   <label>
     טלפון
-    <input type="tel" [(ngModel)]="parentPhone">
+    <input type="tel" formControlName="parentPhone">
   </label>
 </div>

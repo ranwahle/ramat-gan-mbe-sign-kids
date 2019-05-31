@@ -1,12 +1,12 @@
 <div [formGroup]="formGroup">
   <label>
-    <mat-checkbox type="checkbox" [(ngModel)]="noHealthProblems" formControlName="noHealthProblemsß"></mat-checkbox>
+    <mat-checkbox type="checkbox" formControlName="noHealthProblems"></mat-checkbox>
     לא ידוע לי על רגישויות או מגבלות בריאותיות המונעות מבני להשתתף בכל הפעילויות
   </label>
-  <div *ngIf="!noHealthProblems">
+  <div *ngIf="!noHealthProblems" >
     <div>
       <label>
-        <mat-checkbox type="checkbox" [(ngModel)]="needHealthAssistants" fformControlName="needHealthAssistants">
+        <mat-checkbox type="checkbox" formControlName="needHealthAssistants">
         </mat-checkbox>
         נדרש ליווי רפואי צמוד
       </label>
@@ -14,19 +14,19 @@
     <div>
       <label>
         תיאור הבעיה הרפואית
-        <input type="text" [(ngModel)]="healthProblemDescription">
+        <input type="text"  formControlName="healthProblemDescription">
       </label>
     </div>
     <div>
       <label>
         יש צורך לקחת תרופות מסוג
-        <input type="text" [(ngModel)]="typeOfMedicationRequired">
+        <input type="text" formControlName="typeOfMedicationRequired">
       </label>
     </div>
     <div>
       <label>
         יש אלרגיה / רגישות ל
-        <input type="text" [(ngModel)]="allergies">
+        <input type="text"  fromControlName="allergies">
       </label>
     </div>
   </div>
@@ -34,7 +34,7 @@
   <div>
     <label>
       קופת חולים
-      <input type="text" [(ngModel)]="medicalOrganization">
+      <input type="text"  formControlName="medicalOrganization">
     </label>
   </div>
 </div>

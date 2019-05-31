@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Escort} from '../model/escort';
+import {FormGroup} from "@angular/forms";
 
 
 @Component({
@@ -9,6 +10,7 @@ import {Escort} from '../model/escort';
 })
 export class StudentEscortComponent implements OnInit {
 
+  @Input() formGroup: FormGroup;
   goHome: 'alone' | 'withEscort';
   escorts: Escort[];
   constructor() { }

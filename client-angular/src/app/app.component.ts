@@ -22,6 +22,6 @@ export class AppComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('valid', this.formGroup.valid);
+      console.log('valid', this.formGroup.valid);
   }
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-parent-contact-details',
@@ -7,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentContactDetailsComponent implements OnInit {
 
-  parentPhone: string;
-  parentName: string;
+  @Input() formGroup: FormGroup;
+
   constructor() { }
 
   ngOnInit() {
+    this.formGroup.setControl('parentName', new FormControl('', Validators.required))
+    this.formGroup.setControl('parentPhone', new FormControl('', Validators.required))
   }
 
 }

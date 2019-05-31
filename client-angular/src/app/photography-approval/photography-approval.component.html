@@ -1,4 +1,4 @@
-<div>
+<div [formGroup]="formGroup">
   <h2>
     צילום הילדים ופרסום התמונות
   </h2>
@@ -7,7 +7,7 @@
   </div>
   <div>
     <label>
-      <mat-checkbox type="checkbox" [(ngModel)]="photographApproval" (change)="photographApprovalChanged()">
+      <mat-checkbox type="checkbox" formControlName="photographApproval" (change)="photographApprovalChanged($event)">
       </mat-checkbox>
       הנני מאשר לצלם תמונות בני/ ביתי
     </label>
@@ -15,7 +15,7 @@
   </div>
   <div>
     <label>
-      <mat-checkbox type="checkbox" [(ngModel)]="photoUseApproval" [disabled]="!photographApproval">
+      <mat-checkbox type="checkbox" formControlName="photoUseApproval" >
       </mat-checkbox>
       הנני מאשר לפרסם תמונות בני/ ביתי
     </label>
