@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Escort} from '../model/escort';
-import {FormGroup} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 
 
 @Component({
@@ -12,18 +12,24 @@ export class StudentEscortComponent implements OnInit {
 
   @Input() formGroup: FormGroup;
   goHome: 'alone' | 'withEscort';
-  escorts: Escort[];
-  constructor() { }
+  escorts: FormGroup[];
+  constructor(private formBuilder: FormBuilder) { }
 
   defaultEscoort(): Escort {
     return {fullName: '', phoneNumber: '', relation: ''};
   }
 
   ngOnInit() {
-    this.escorts = [this.defaultEscoort()];
+    this.formGroup.setControl('goHome', new FormControl('alone', Validators.required))
+    this.formGroup.valueChanges.subscribe(values => this.goHome = values.goHome)
+    this.escorts = [this.formBuilder.group({})];
   }
   addEscort() {
-    this.escorts.push(this.defaultEscoort())
+    this.escorts.push(this.formBuilder.group({}))
+  }
+
+  getData() {
+    return {goHome: this.goHome, escorts: this.escorts}
   }
 
 }

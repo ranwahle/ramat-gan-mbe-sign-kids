@@ -1,30 +1,30 @@
-<div>
+<div [formGroup]="formGroup">
   <h2>בתום הפעילות</h2>
   <div>
     <label>
-      <input type="radio" value="alone" [(ngModel)]="goHome">
+      <input type="radio" value="alone" formControlName="goHome">
       הילד/ה הולך/ת הביתה בכוחות עצמו/ה
     </label>
   </div>
   <div>
     <label>
-      <input type="radio" value="withEscort" [(ngModel)]="goHome">
+      <input type="radio" value="withEscort" formControlName="goHome">
       ישתחרר בליווי
     </label>
   </div>
   <div  *ngIf="goHome === 'withEscort'">
-  <div *ngFor="let escort of escorts">
+  <div *ngFor="let escort of escorts" [formGroup]="escort">
     <label>
       שם מלא
-      <input type="text" [(ngModel)]="escort.fullName">
+      <input type="text" formControlName="fullName">
     </label>
     <label>
      טלפון:
-      <input type="tel" [(ngModel)]="escort.phoneNumber">
+      <input type="tel" formControlName="phoneNumber">
     </label>
     <label>
       קרבה:
-      <input type="text" [(ngModel)]="escort.relation">
+      <input type="text" formControlName="relation">
     </label>
   </div>
   <button type="button" (click)="addEscort()" >הוספת מלווה</button>
