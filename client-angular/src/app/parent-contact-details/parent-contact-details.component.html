@@ -1,11 +1,10 @@
 <div [formGroup]="formGroup">
-  <label>
-    שם ההורה
-    <input type="text" formControlName="parentName">
-  </label>
+  <mat-form-field>
+    <input type="text" matInput formControlName="parentName" placeholder="שם ההורה">
+  </mat-form-field>
 
-  <label>
-    טלפון
-    <input type="tel" formControlName="parentPhone">
-  </label>
+  <mat-form-field>
+
+    <input type="tel" matInput formControlName="parentPhone" placeholder="מספר טלפון">
+  </mat-form-field>
 </div>

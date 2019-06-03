@@ -1,19 +1,18 @@
-<div [formGroup]="formGroup"> <label>
-  שם פרטי:
-  <input type="text" [formControlName]="'firstName'">
-</label>
+<div [formGroup]="formGroup">
+  <mat-form-field>
+    <input type="text" matInput [formControlName]="'firstName'" placeholder="שם פרטי">
+  </mat-form-field>
 
-<label>
-  שם משפחה:
-  <input type="text"  formControlName="lastName">
-</label>
+  <mat-form-field>
+    <input type="text" matInput formControlName="lastName" placeholder="שם משפחה">
+  </mat-form-field>
 
 
-<label>כיתה:
-  <input type="text"  formControlName="schoolClass">
-</label>
+  <mat-form-field>
+    <input type="text" matInput formControlName="schoolClass" placeholder="כיתה">
+  </mat-form-field>
 
-<label>בית ספר:
-  <input type="text"   formControlName="schoolName">
-</label>
+  <mat-form-field>
+    <input type="text" matInput formControlName="schoolName" placeholder="בית ספר">
+  </mat-form-field>
 </div>

@@ -12,21 +12,24 @@
       ישתחרר בליווי
     </label>
   </div>
-  <div  *ngIf="goHome === 'withEscort'">
-  <div *ngFor="let escort of escorts" [formGroup]="escort">
-    <label>
-      שם מלא
-      <input type="text" formControlName="fullName">
-    </label>
-    <label>
-     טלפון:
-      <input type="tel" formControlName="phoneNumber">
-    </label>
-    <label>
-      קרבה:
-      <input type="text" formControlName="relation">
-    </label>
-  </div>
-  <button type="button" (click)="addEscort()" >הוספת מלווה</button>
+  <div *ngIf="goHome === 'withEscort'">
+    <div class="escortRow" *ngFor="let escort of escorts" [formGroup]="escort">
+      <mat-form-field>
+
+          <input matInput type="text" formControlName="fullName" placeholder="שם מלא">
+
+      </mat-form-field>
+      <mat-form-field>
+
+          <input matInput type="tel" formControlName="phoneNumber" placeholder="טלפון">
+
+      </mat-form-field>
+      <mat-form-field>
+
+          <input matInput type="text" formControlName="relation" placeholder="קרבה">
+
+      </mat-form-field>
+    </div>
+    <button mat-btn type="button" (click)="addEscort()">הוספת מלווה</button>
   </div>
 </div>

@@ -10,9 +10,20 @@ import { PhotographyApprovalComponent } from './photography-approval/photography
 import { StudentEscortComponent } from './student-escort/student-escort.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {MatButtonModule, MatCheckboxModule} from "@angular/material";
+import {MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule} from "@angular/material";
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    AppRoutingModule
+  ],
   declarations: [
     AppComponent,
     HealthStatementComponent,
@@ -22,15 +33,7 @@ import {MatButtonModule, MatCheckboxModule} from "@angular/material";
     StudentEscortComponent
 
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule,
-    MatCheckboxModule,
-    MatButtonModule,
-    AppRoutingModule
-  ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
