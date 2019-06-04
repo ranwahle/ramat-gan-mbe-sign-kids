@@ -26,6 +26,7 @@ export class AppComponent implements OnInit {
 
   onSubmit() {
 
-      console.log('valid', this.formGroup.valid, this.escort.getData());
+
+      console.log('valid', this.formGroup.valid, this.formGroup.value, this.escort.getData());
   }
 }
