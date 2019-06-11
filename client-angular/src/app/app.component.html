@@ -1,18 +1,33 @@
 <div>
   <h1>אישור הורים</h1>
     <form (ngSubmit)="onSubmit()" [formGroup]="formGroup">
-      <div>
-      <app-student-details [formGroup]="formGroup" ></app-student-details>
-      </div>
-      <div>
-        <h2>הצהרת בריאות</h2>
-      <app-health-statement [formGroup]="formGroup" ></app-health-statement>
-      </div>
-      <h2>פרטי קשר הורה</h2>
-      <app-parent-contact-details [formGroup]="formGroup"></app-parent-contact-details>
-      <app-photography-approval [formGroup]="formGroup"></app-photography-approval>
-      <app-student-escort #studentEscort [formGroup]="formGroup"></app-student-escort>
+      <mat-accordion>
+<app-form-layout-component [title]="'פרטי הילד'">
+  <app-student-details [formGroup]="formGroup" ></app-student-details>
+</app-form-layout-component>
+
+        <app-form-layout-component [title]="'הצהרת בריאות'">
+        <app-health-statement [formGroup]="formGroup" ></app-health-statement>
+
+      </app-form-layout-component>
+      <app-form-layout-component title="פרטי קשר הורה">
+        <app-parent-contact-details [formGroup]="formGroup"></app-parent-contact-details>
+
+      </app-form-layout-component>
+
+
+<app-form-layout-component title="צילום הילדים ופרסום התמונות">
+  <app-photography-approval [formGroup]="formGroup"></app-photography-approval>
+
+</app-form-layout-component>
+
+        <app-form-layout-component title="ליווי בתום הפעילות">
+          <app-student-escort #studentEscort [formGroup]="formGroup"></app-student-escort>
+
+        </app-form-layout-component>
+
       <button mat-raised-button color="primary" type="submit">שלח</button>
 
+      </mat-accordion>
     </form>
 </div>

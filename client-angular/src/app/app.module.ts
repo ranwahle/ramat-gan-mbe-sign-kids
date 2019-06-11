@@ -10,7 +10,16 @@ import { PhotographyApprovalComponent } from './photography-approval/photography
 import { StudentEscortComponent } from './student-escort/student-escort.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule} from "@angular/material";
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatExpansionModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatListModule
+} from "@angular/material";
+import {MatDividerModule} from "@angular/material/divider";
+import { FormLayoutComponentComponent } from './form-layout-component/form-layout-component.component';
 
 @NgModule({
   imports: [
@@ -22,7 +31,10 @@ import {MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule} 
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatListModule
   ],
   declarations: [
     AppComponent,
@@ -30,7 +42,8 @@ import {MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule} 
     StudentDetailsComponent,
     ParentContactDetailsComponent,
     PhotographyApprovalComponent,
-    StudentEscortComponent
+    StudentEscortComponent,
+    FormLayoutComponentComponent
 
   ],
 

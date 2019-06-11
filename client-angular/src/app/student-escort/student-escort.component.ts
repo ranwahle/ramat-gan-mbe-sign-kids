@@ -37,6 +37,10 @@ export class StudentEscortComponent implements OnInit {
     this.escorts.push(this.escortFormGroup())
   }
 
+  removeEscort(escort) {
+    this.escorts = this.escorts.filter(item => item !== escort);
+  }
+
   getData() {
     return {
       goHome: this.formGroup.controls['goHome'].value,
