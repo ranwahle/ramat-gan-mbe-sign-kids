@@ -15,13 +15,13 @@ export class AppComponent implements OnInit {
   @ViewChild('studentEscort', null) escort: StudentEscortComponent;
 
   constructor(private formBuilder: FormBuilder) {
-
-  }
-
-  ngOnInit() {
     this.formGroup = this.formBuilder.group({
 
     })
+  }
+
+  ngOnInit() {
+
   }
 
   onSubmit() {

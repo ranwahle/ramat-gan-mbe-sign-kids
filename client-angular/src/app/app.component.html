@@ -2,26 +2,26 @@
   <h1>אישור הורים</h1>
     <form (ngSubmit)="onSubmit()" [formGroup]="formGroup">
       <mat-accordion>
-<app-form-layout-component [title]="'פרטי הילד'">
-  <app-student-details [formGroup]="formGroup" ></app-student-details>
+<app-form-layout-component [keys]="['firstName','lastName', 'schoolClass','schoolName']" [formGroup]="formGroup" [title]="'פרטי הילד'"  >
+  <app-student-details [formGroup]="formGroup"></app-student-details>
 </app-form-layout-component>
 
-        <app-form-layout-component [title]="'הצהרת בריאות'">
+        <app-form-layout-component [formGroup]="formGroup" [title]="'הצהרת בריאות'">
         <app-health-statement [formGroup]="formGroup" ></app-health-statement>
 
       </app-form-layout-component>
-      <app-form-layout-component title="פרטי קשר הורה">
+      <app-form-layout-component title="פרטי קשר הורה"  [formGroup]="formGroup">
         <app-parent-contact-details [formGroup]="formGroup"></app-parent-contact-details>
 
       </app-form-layout-component>
 
 
-<app-form-layout-component title="צילום הילדים ופרסום התמונות">
+<app-form-layout-component title="צילום הילדים ופרסום התמונות" [formGroup]="formGroup">
   <app-photography-approval [formGroup]="formGroup"></app-photography-approval>
 
 </app-form-layout-component>
 
-        <app-form-layout-component title="ליווי בתום הפעילות">
+        <app-form-layout-component title="ליווי בתום הפעילות" [formGroup]="formGroup">
           <app-student-escort #studentEscort [formGroup]="formGroup"></app-student-escort>
 
         </app-form-layout-component>

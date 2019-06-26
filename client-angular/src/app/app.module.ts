@@ -16,7 +16,7 @@ import {
   MatExpansionModule,
   MatFormFieldModule,
   MatInputModule,
-  MatListModule
+  MatListModule, MatTooltipModule
 } from "@angular/material";
 import {MatDividerModule} from "@angular/material/divider";
 import { FormLayoutComponentComponent } from './form-layout-component/form-layout-component.component';
@@ -34,7 +34,8 @@ import { FormLayoutComponentComponent } from './form-layout-component/form-layou
     AppRoutingModule,
     MatDividerModule,
     MatExpansionModule,
-    MatListModule
+    MatListModule,
+    MatTooltipModule
   ],
   declarations: [
     AppComponent,
